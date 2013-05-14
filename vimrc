@@ -1,0 +1,2 @@
+inoremap ( (<space>
+inoremap ) <space>)
