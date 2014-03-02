@@ -1,6 +1,4 @@
 syntax enable
-set foldmethod=syntax
-set foldenable
 set nocompatible
 set et
 set sw=4
