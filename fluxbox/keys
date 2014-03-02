@@ -141,3 +141,5 @@ Mod1 Shift_L :ExecCommand ~/.fluxbox/lswitch
 Print :Exec gnome-screenshot
 XF86AudioLowerVolume :Exec amixer set PCM 1%- > /dev/null
 XF86AudioRaiseVolume :Exec amixer set PCM 1%+ > /dev/null
+
+# End of Mine configuration
