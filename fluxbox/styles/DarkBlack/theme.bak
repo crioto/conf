@@ -1,0 +1,186 @@
+!---------------------------------------------------------------------------------
+! Style name: DarkYO (modded)
+! Style Author: eXpander
+! Style Date: 5/9/2011
+!----------------------------------------------------------------------------------
+
+menu.bevelWidth:                        1
+menu.borderColor:                       #FFAD33
+menu.borderWidth:			0
+menu.bullet:                            
+menu.bullet.position:                   Left
+menu.frame:                             Flat
+menu.frame.color:                       Black
+menu.frame.colorTo:                     #000000
+menu.frame.disableColor:                
+menu.frame.font:                        Zekton-10:bold
+menu.frame.font.effect:                 shadow
+menu.frame.font.shadow.color:           black
+menu.frame.font.shadow.x: 2
+menu.frame.font.shadow.y: 2
+menu.frame.justify:                     Left
+menu.frame.pixmap:                      
+menu.frame.textColor:                   #FFAD33
+#menu.hilite:                            Raised Bevel1 Gradient Vertical
+menu.hilite:                            #ffffff
+menu.hilite.color:                      #ffffff
+menu.hilite.colorTo:                    #ffffff
+menu.hilite.pixmap:                     bar.xpm
+menu.hilite.textColor:                  #FFF56D
+menu.roundCorners:                      TopLeft TopRight BottomLeft BottomRight
+menu.selected.pixmap:                   selected.xpm
+menu.submenu.pixmap:                    
+menu.title:                             
+menu.title.color:                       #333333
+menu.title.colorTo:                     #666666
+menu.title.font:                        Zekton-8:bold
+menu.title.justify:                     Center
+menu.title.pixmap:                      bar1.xpm
+menu.title.textColor:                   #FFF56D
+menu.title.font.effect:                 shadow
+menu.title.font.shadow.color:           black
+menu.title.font.shadow.x: 2
+menu.title.font.shadow.y: 2
+menu.unselected.pixmap:                 
+rootCommand:                            
+slit:                                   Flat
+slit.bevelWidth:			0               
+slit.borderColor:                       #000000
+slit.borderWidth:                       0
+slit.color:                             
+slit.colorTo:                           
+slit.pixmap:  
+toolbar.button.color:                  #FFAD33
+toolbar.button.picColor:               #FFAD33                          
+toolbar:                                Flat
+toolbar.alpha:                          255
+toolbar.bevelWidth:                     1
+toolbar.borderColor:                    #000000
+toolbar.borderWidth:                    0
+toolbar.clock:                          Raised Bevel1 Gradient Vertical
+#toolbar.clock.borderColor:             #ffffff
+#toolbar.clock.borderWidth:             1
+toolbar.clock.color:                    
+toolbar.clock.colorTo:                  
+toolbar.clock.font:                     Kristen ITC-8:bold
+toolbar.clock.justify:                  Center
+toolbar.clock.pixmap:                   bar1.xpm
+toolbar.clock.textColor:                #E4E4E4
+toolbar.color:                          #000000
+toolbar.colorTo:                        #666666
+toolbar.height:                         19
+toolbar.iconbar.borderColor:            #000000
+toolbar.iconbar.borderWidth:            0
+toolbar.iconbar.empty:                  Raised Bevel1 Gradient Vertical
+toolbar.iconbar.empty.color:            #ffffff
+toolbar.iconbar.empty.colorTo:          #ffffff
+toolbar.iconbar.empty.pixmap:           bar1.xpm
+toolbar.iconbar.focused:                Raised Bevel1 Gradient Vertical
+toolbar.iconbar.focused.borderColor:    #999999
+toolbar.iconbar.focused.borderWidth:    0
+#toolbar.iconbar.focused.color:         #000000
+#toolbar.iconbar.focused.colorTo:       #ffffff
+toolbar.iconbar.focused.font:           Zekton-7:bold
+toolbar.iconbar.focused.justify:        Center
+toolbar.iconbar.focused.pixmap:         bar.xpm
+toolbar.iconbar.focused.textColor:      #FFF56D
+toolbar.iconbar.unfocused:              Raised Bevel1 Gradient Vertical
+toolbar.iconbar.unfocused.borderColor:  #333333
+toolbar.iconbar.unfocused.borderWidth:  0
+toolbar.iconbar.unfocused.color:        
+toolbar.iconbar.unfocused.colorTo:      
+toolbar.iconbar.unfocused.font:         Zekton-7:bold
+toolbar.iconbar.unfocused.justify:      Center
+toolbar.iconbar.unfocused.pixmap:       bar1.xpm
+toolbar.iconbar.unfocused.textColor:    #FFAD33
+toolbar.pixmap:                         
+toolbar.shaped:                         False
+toolbar.workspace:                      Raised Bevel1 Gradient Vertical
+#toolbar.workspace.borderColor:         #ffffff
+#toolbar.workspace.borderWidth:         1
+toolbar.workspace.color:                #00AFFF
+toolbar.workspace.colorTo:              #00AFFF
+toolbar.workspace.font:                 Zekton-7:bold
+toolbar.workspace.justify:              Center
+toolbar.workspace.pixmap:               bar1.xpm
+toolbar.workspace.textColor:            #FFF56D
+window.alpha:                           155
+window.bevelWidth:                      0
+window.borderColor:                     #1B1B1B
+window.borderWidth:                     0
+window.button.focus:                    
+window.button.focus.color:              
+window.button.focus.colorTo:            
+window.button.focus.picColor:           
+window.button.focus.pixmap:             
+window.button.pressed:                  
+window.button.pressed.color:            
+window.button.pressed.colorTo:          
+window.button.pressed.pixmap:           
+window.button.unfocus:                  
+window.button.unfocus.color:            
+window.button.unfocus.colorTo:          
+window.button.unfocus.picColor:         
+window.button.unfocus.pixmap:           
+window.close.pixmap:                    close2a.xpm
+window.close.pressed.pixmap:            close2b.xpm
+window.close.unfocus.pixmap:            close2a.xpm
+window.font:                            Zekton-7:bold
+window.frame.focusColor:                #ffad33
+window.frame.unfocusColor:              #ffad33
+window.grip.focus:                      Raised Bevel1 Gradient Vertical
+window.grip.focus.color:                #ffad33
+window.grip.focus.colorTo:              #ffad33
+window.grip.focus.pixmap:               
+window.grip.unfocus:                    Raised Bevel1 Gradient Vertical
+window.grip.unfocus.color:              #ffad33
+window.grip.unfocus.colorTo:            #ffad33
+window.grip.unfocus.pixmap:             wtitle-unfocus.xpm
+window.handle.focus:                    Raised Bevel1 Gradient Vertical
+window.handle.focus.color:              #ffad33
+window.handle.focus.colorTo:            #ffad33
+window.handle.focus.pixmap:             
+window.handle.unfocus:                  Raised Bevel1 Gradient Vertical
+window.handle.unfocus.color:            #ffad33
+window.handle.unfocus.colorTo:          #ffad33
+window.handle.unfocus.pixmap:           
+window.handleWidth:                     2
+window.iconify.pixmap:                  min2a.xpm
+window.iconify.pressed.pixmap:          min2b.xpm
+window.iconify.unfocus.pixmap:          min2a.xpm
+window.justify:                         Center
+window.label.focus:                     Raised Bevel1 Gradient Vertical
+window.label.focus.color:               
+window.label.focus.colorTo:             
+window.label.focus.pixmap:              bar1.xpm
+window.label.focus.textColor:           #FFF56D
+window.label.unfocus:                   Raised Bevel1 Gradient Vertical
+window.label.unfocus.color:             
+window.label.unfocus.colorTo:           
+window.label.unfocus.pixmap:            bar1.xpm
+window.label.unfocus.textColor:         #FFAD33
+window.maximize.pixmap:                 max2a.xpm
+window.maximize.pressed.pixmap:         max2b.xpm
+window.maximize.unfocus.pixmap:         max2a.xpm
+window.roundCorners:                    TopRight TopLeft BottomRight BottomLeft
+window.shade.pixmap:                    bar1.xpm
+window.shade.pressed.pixmap:            bar1.xpm
+window.shade.unfocus.pixmap:            bar1.xpm
+window.stick.pixmap:                    bar1.xpm          
+window.stick.pressed.pixmap:            bar1.xpm
+window.stick.unfocus.pixmap:            bar1.xpm
+window.stuck.pixmap:                    bar1.xpm
+window.stuck.unfocus.pixmap:            bar1.xpm
+window.title.focus:                     Flat
+window.title.focus.color:               #fff56d
+window.title.focus.colorTo:             #fff56d
+window.title.focus.pixmap:              
+window.title.height:                    16
+window.title.unfocus:                   Flat
+window.title.unfocus.color:             #ffad33
+window.title.unfocus.colorTo:           #ffad33
+window.title.unfocus.pixmap:            
+
+#Background Possibilities
+background: strech
+background.pixmap:
