@@ -38,3 +38,7 @@ mkdir $HOME/.fonts
 
 echo "Downloading Monaco font"
 wget -nv https://github.com/todylu/monaco.ttf/raw/master/monaco.ttf -O $HOME/.fonts/monaco.ttf
+
+echo "Creating terminator directory and config file"
+mkdir -p $HOME/.config/terminator
+cp terminator.config $HOME/.config/terminator/config
