@@ -9,7 +9,36 @@ if [ -d $HOME/.fluxbox ]; then
     echo "Directory .fluxbox exists"
 else
     echo "Creating .fluxbox directory"
-    mkdir $HOME/.fluxbox
+    mkdir -p $HOME/.fluxbox
 fi
 cp -r fluxbox/styles $HOME/.fluxbox/ 
 cp -r fluxbox/* $HOME/.fluxbox/
+
+echo "Creating .vim directory and subdirectories in a home folder"
+mkdir -p $HOME/.vim
+mkdir -p $HOME/.vim/autoload
+mkdir -p $HOME/.vim/colors
+mkdir -p $HOME/.vim/doc
+mkdir -p $HOME/.vim/ftplugin
+mkdir -p $HOME/.vim/plugin
+mkdir -p $HOME/.vim/syntax
+
+echo "Downloading jellybeans vim color scheme" 
+# http://www.vim.org/scripts/script.php?script_id=2555
+wget -nv http://www.vim.org/scripts/download_script.php?src_id=17225 -O $HOME/.vim/colors/jellybeans.vim 
+
+echo "Downloading cvim plugin for C/C++ support"
+# http://www.vim.org/scripts/script.php?script_id=213
+wget -nv http://www.vim.org/scripts/download_script.php?src_id=21803 -O $HOME/.vim/cvim.zip
+unzip -o -qq $HOME/.vim/cvim.zip -d $HOME/.vim/
+rm -rf $HOME/.vim/cvim.zip
+
+echo "Setting up fonts directory"
+mkdir $HOME/.fonts
+
+echo "Downloading Monaco font"
+wget -nv https://github.com/todylu/monaco.ttf/raw/master/monaco.ttf -O $HOME/.fonts/monaco.ttf
+
+echo "Creating terminator directory and config file"
+mkdir -p $HOME/.config/terminator
+cp terminator.config $HOME/.config/terminator/config
