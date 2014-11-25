@@ -12,4 +12,4 @@ else
     mkdir $HOME/.fluxbox
 fi
 cp -r fluxbox/styles $HOME/.fluxbox/ 
-cp -r fluxbox/* ~/.fluxbox/
+cp -r fluxbox/* $HOME/.fluxbox/
