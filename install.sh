@@ -34,7 +34,7 @@ unzip -o -qq $HOME/.vim/cvim.zip -d $HOME/.vim/
 rm -rf $HOME/.vim/cvim.zip
 
 echo "Setting up fonts directory"
-mkdir $HOME/.fonts
+mkdir -p $HOME/.fonts
 
 echo "Downloading Monaco font"
 wget -nv https://github.com/todylu/monaco.ttf/raw/master/monaco.ttf -O $HOME/.fonts/monaco.ttf
