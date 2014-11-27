@@ -13,3 +13,7 @@ set number
 filetype plugin on
 filetype indent on
 colors jellybeans
+"
+" Airline
+set t_Co=256
+set laststatus=2
