@@ -20,7 +20,7 @@ then
         done
         if [ ${#LOWEST} -gt 1000 ]
         then
-            echo "Can't find specified project directory"
+            echo "Can't find specified project directory or path is too long"
         else
             cd $LOWEST
         fi
