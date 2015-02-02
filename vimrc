@@ -44,3 +44,19 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+
+" Disable arrow keys
+for prefix in ['i', 'n', 'v']
+    for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+        execute prefix . "noremap " . key . " <Nop>"
+    endfor
+endfor
+
+" Folding
+set foldenable
+set foldclose=""
+set foldcolumn=1
+set foldlevel=10
+set foldlevelstart=10
+set foldmethod=indent
+set foldopen=block,hor,mark,percent,quickfix,search,tag,undo
