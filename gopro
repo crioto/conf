@@ -1,0 +1,28 @@
+#!/bin/bash
+
+PROJECT_NAME=$1
+LOWEST=`for i in {1..1000}; do echo "l"; done`
+
+if [ ! -z "$1" ]
+then
+    if [ ! -d "$HOME/Projects" ]
+    then
+        echo "Can't locate Projects directory within home directory"
+    else
+        for pathline in `find $HOME/Projects -name $PROJECT_NAME`; do
+            if [ -d $pathline ]
+            then
+                if [ ${#LOWEST} -gt ${#pathline} ]
+                then
+                    LOWEST=$pathline
+                fi
+            fi
+        done
+        if [ ${#LOWEST} -gt 1000 ]
+        then
+            echo "Can't find specified project directory or path is too long"
+        else
+            cd $LOWEST
+        fi
+    fi
+fi

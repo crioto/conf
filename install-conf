@@ -14,6 +14,8 @@ fi
 cp -r fluxbox/styles $HOME/.fluxbox/ 
 cp -r fluxbox/* $HOME/.fluxbox/
 
+cp gopro /usr/bin
+
 echo "Creating .vim directory and subdirectories in a home folder"
 mkdir -p $HOME/.vim
 mkdir -p $HOME/.vim/autoload
