@@ -1,4 +1,7 @@
 #!/bin/bash
+
+VIMDIR=$HOME/.vim
+
 echo "Settings up configuration"
 echo "Putting .bashrc file onto $HOME directory"
 cp bashrc $HOME/.bashrc
@@ -17,23 +20,23 @@ cp -r fluxbox/* ~/.fluxbox/
 cp gopro /usr/bin
 
 echo "Creating .vim directory and subdirectories in a home folder"
-mkdir -p $HOME/.vim
-mkdir -p $HOME/.vim/autoload
-mkdir -p $HOME/.vim/colors
-mkdir -p $HOME/.vim/doc
-mkdir -p $HOME/.vim/ftplugin
-mkdir -p $HOME/.vim/plugin
-mkdir -p $HOME/.vim/syntax
+mkdir -p $VIMDIR
+mkdir -p $VIMDIR/autoload
+mkdir -p $VIMDIR/colors
+mkdir -p $VIMDIR/doc
+mkdir -p $VIMDIR/ftplugin
+mkdir -p $VIMDIR/plugin
+mkdir -p $VIMDIR/syntax
 
 echo "Downloading jellybeans vim color scheme" 
 # http://www.vim.org/scripts/script.php?script_id=2555
-wget -nv http://www.vim.org/scripts/download_script.php?src_id=17225 -O $HOME/.vim/colors/jellybeans.vim 
+wget -nv http://www.vim.org/scripts/download_script.php?src_id=17225 -O $VIMDIR/colors/jellybeans.vim 
 
 echo "Downloading cvim plugin for C/C++ support"
 # http://www.vim.org/scripts/script.php?script_id=213
-wget -nv http://www.vim.org/scripts/download_script.php?src_id=21803 -O $HOME/.vim/cvim.zip
-unzip -o -qq $HOME/.vim/cvim.zip -d $HOME/.vim/
-rm -rf $HOME/.vim/cvim.zip
+wget -nv http://www.vim.org/scripts/download_script.php?src_id=21803 -O $VIMDIR/cvim.zip
+unzip -o -qq $VIMDIR/cvim.zip -d $VIMDIR/
+rm -rf $VIMDIR/cvim.zip
 
 echo "Setting up fonts directory"
 mkdir $HOME/.fonts
