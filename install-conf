@@ -28,6 +28,9 @@ mkdir -p $VIMDIR/ftplugin
 mkdir -p $VIMDIR/plugin
 mkdir -p $VIMDIR/syntax
 
+echo "Setting up Vundle"
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 echo "Downloading jellybeans vim color scheme" 
 # http://www.vim.org/scripts/script.php?script_id=2555
 wget -nv http://www.vim.org/scripts/download_script.php?src_id=17225 -O $VIMDIR/colors/jellybeans.vim 
