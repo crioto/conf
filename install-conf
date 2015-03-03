@@ -59,3 +59,7 @@ cp -r vim-airline/doc ~/.vim/
 cp -r vim-airline/plugin ~/.vim/
 cp -r vim-airline/t ~/.vim/
 rm -rf vim-airline
+
+echo "Setting up awesome"
+mkdir -p /etc/xdg/awesome
+cp awesome-rc.lua /etc/xdg/awesome/
