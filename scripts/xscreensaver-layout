@@ -1,0 +1,11 @@
+#!/bin/bash
+
+process() {
+    while read input; do
+        case "$input" in
+            LOCK*) setxkbmap us ;;
+        esac
+    done 
+}
+
+xscreensaver-command -watch | process

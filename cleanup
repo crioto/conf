@@ -1,0 +1,6 @@
+#!/bin/bash
+
+VIMDIR=$HOME/.vim
+
+echo "Removing .bashrc backup files"
+rm -f $HOME/.bashrc.backup.*

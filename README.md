@@ -10,3 +10,5 @@ What it does:
 3. Downloads some plugins for vim
 4. Downloads some fonts i use
 5. Adds fluxbox style theme
+6. Configures awesome
+7. Configures terminator
