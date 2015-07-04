@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Checking awesome installation"
+awesome --version
+
+CONF_AWESOME_DIR=$HOME/.config/awesome
+
+if [ $? == 0 ]; then
+    echo "Setting up awesome"
+    if [ ! -d $CONF_AWESOME_DIR ]; then
+        mkdir -p $CONF_AWESOME_DIR
+    fi
+    backup_file $CONF_AWESOME_DIR/rc.lua
+    cp ./configs/awesome-rc.lua $CONF_AWESOME_DIR/rc.lua
+    cp -r ./themes/awesome-theme $CONF_AWESOME_DIR/
+else
+    echo "awesome is not installed. Skipping"
+fi

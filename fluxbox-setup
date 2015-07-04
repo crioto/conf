@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Checking fluxbox installation"
+fluxbox --version
+
+if [ $? == 0 ]; then 
+    echo "Settings up fluxbox. Checking config directory..."
+    if [ -d $HOME/.fluxbox ]; then
+        echo "Directory .fluxbox exists"
+    else
+        echo "Creating .fluxbox directory"
+        mkdir -p $HOME/.fluxbox
+    fi
+    cp -r fluxbox/styles $HOME/.fluxbox/ 
+    cp -r fluxbox/* ~/.fluxbox/
+else
+    echo "fluxbox is not installed. Skipping"
+fi

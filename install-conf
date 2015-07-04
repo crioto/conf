@@ -1,58 +1,45 @@
 #!/bin/bash
-echo "Settings up configuration"
-echo "Putting .bashrc file onto $HOME directory"
-cp bashrc $HOME/.bashrc
-echo "Putting .vimrc file onto $HOME directory"
-cp vimrc $HOME/.vimrc
-echo "Settings up fluxbox. Checking config directory..."
-if [ -d $HOME/.fluxbox ]; then
-    echo "Directory .fluxbox exists"
-else
-    echo "Creating .fluxbox directory"
-    mkdir -p $HOME/.fluxbox
-fi
-cp -r fluxbox/styles $HOME/.fluxbox/ 
-cp -r fluxbox/* $HOME/.fluxbox/
+VIMDIR=$HOME/.vim
 
-cp gopro /usr/bin
+function backup_file
+{
+    if [ -f $1 ]; then
+        echo "Creating a backup file for $1"
+        cp $1 $1.backup.`date +%Y-%m-%d-%s`
+    else
+        echo "$1 does not exist - skipping backup"
+    fi
+}
 
-echo "Creating .vim directory and subdirectories in a home folder"
-mkdir -p $HOME/.vim
-mkdir -p $HOME/.vim/autoload
-mkdir -p $HOME/.vim/colors
-mkdir -p $HOME/.vim/doc
-mkdir -p $HOME/.vim/ftplugin
-mkdir -p $HOME/.vim/plugin
-mkdir -p $HOME/.vim/syntax
+### .bashrc
+source ./bashrc-setup
 
-echo "Downloading jellybeans vim color scheme" 
-# http://www.vim.org/scripts/script.php?script_id=2555
-wget -nv http://www.vim.org/scripts/download_script.php?src_id=17225 -O $HOME/.vim/colors/jellybeans.vim 
+### fluxbox
+source ./fluxbox-setup
 
-echo "Downloading cvim plugin for C/C++ support"
-# http://www.vim.org/scripts/script.php?script_id=213
-wget -nv http://www.vim.org/scripts/download_script.php?src_id=21803 -O $HOME/.vim/cvim.zip
-unzip -o -qq $HOME/.vim/cvim.zip -d $HOME/.vim/
-rm -rf $HOME/.vim/cvim.zip
+### Awesome
+source ./awesome-setup
+
+### scripts
+cp scripts/gopro /usr/bin
+cp scripts/lswitch /usr/bin/layout-switch
+cp scripts/xscreensaver-layout /usr/bin/xscreensaver-layout
+
+### VIM setup
+source ./vim-setup
+
+### Fonts
 
 echo "Setting up fonts directory"
-mkdir -p $HOME/.fonts
+if [ -d $HOME/.fonts ]; then
+    echo "$HOME/.fonts directory exists"
+else
+    echo "$HOME/.fonts directory does not exists. Creating" 
+    mkdir $HOME/.fonts
+fi
 
 echo "Downloading Monaco font"
 wget -nv https://github.com/todylu/monaco.ttf/raw/master/monaco.ttf -O $HOME/.fonts/monaco.ttf
 
-#echo "Creating terminator directory and config file"
-#mkdir -p $HOME/.config/terminator
-#cp terminator.config $HOME/.config/terminator/config
-
-echo "Downloading and installing vim-airline"
-# https://github.com/bling/vim-airline
-git clone https://github.com/bling/vim-airline.git
-cp -r vim-airline/autoload ~/.vim/
-cp -r vim-airline/doc ~/.vim/
-cp -r vim-airline/plugin ~/.vim/
-cp -r vim-airline/t ~/.vim/
-rm -rf vim-airline
-
-echo "Installing Vundle"
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+### Terminator
+source ./terminator-setup

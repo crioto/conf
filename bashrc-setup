@@ -1,0 +1,6 @@
+#!/bin/bash
+
+backup_file $HOME/.bashrc
+echo "Putting .bashrc file onto $HOME directory"
+cp ./configs/.bashrc $HOME/.bashrc
+

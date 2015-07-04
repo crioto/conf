@@ -1,0 +1,10 @@
+#!/bin/bash
+
+terminator --version 1>/dev/null 2>/dev/null
+if [ $? == 0 ]; then
+    echo "Creating terminator directory and config file"
+    mkdir -p $HOME/.config/terminator
+    cp ./configs/terminator.config $HOME/.config/terminator/config
+else
+    echo "terminator is not intalled. Skipping"
+fi
