@@ -1,8 +1,5 @@
 #!/bin/bash
-
 VIMDIR=$HOME/.vim
-
-
 
 function backup_file
 {
