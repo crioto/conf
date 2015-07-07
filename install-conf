@@ -11,35 +11,63 @@ function backup_file
     fi
 }
 
-### .bashrc
-source ./bashrc-setup
+function fonts_setup
+{
+    echo "Setting up fonts directory"
+    if [ -d $HOME/.fonts ]; then
+        echo "$HOME/.fonts directory exists"
+    else
+        echo "$HOME/.fonts directory does not exists. Creating" 
+        mkdir $HOME/.fonts
+    fi
 
-### fluxbox
-source ./fluxbox-setup
+    echo "Downloading Monaco font"
+    if [ -f $HOME/.fonts/monaco.ttf ]; then
+        echo "Monaco font already exists. Skipping"
+    else
+        wget -nv https://github.com/todylu/monaco.ttf/raw/master/monaco.ttf -O $HOME/.fonts/monaco.ttf
+    fi
+}
 
-### Awesome
-source ./awesome-setup
+function tools_setup
+{
+    sudo cp scripts/gopro /usr/bin
+    sudo cp scripts/lswitch /usr/bin/layout-switch
+    sudo cp scripts/xscreensaver-layout /usr/bin/xscreensaver-layout
+}
 
-### scripts
-cp scripts/gopro /usr/bin
-cp scripts/lswitch /usr/bin/layout-switch
-cp scripts/xscreensaver-layout /usr/bin/xscreensaver-layout
-
-### VIM setup
-source ./vim-setup
-
-### Fonts
-
-echo "Setting up fonts directory"
-if [ -d $HOME/.fonts ]; then
-    echo "$HOME/.fonts directory exists"
-else
-    echo "$HOME/.fonts directory does not exists. Creating" 
-    mkdir $HOME/.fonts
-fi
-
-echo "Downloading Monaco font"
-wget -nv https://github.com/todylu/monaco.ttf/raw/master/monaco.ttf -O $HOME/.fonts/monaco.ttf
-
-### Terminator
-source ./terminator-setup
+case "$1" in
+    awesome)
+        source ./awesome-setup
+        exit 0
+        ;;
+    fluxbox)
+        source ./fluxbox-setup
+        exit 0
+        ;;
+    bash)
+        source ./bashrc-setup
+        exit 0
+        ;;
+    vim)
+        source ./vim-setup
+        exit 0
+        ;;
+    terminator)
+        source ./terminator-setup
+        exit 0
+        ;;
+    fonts)
+        fonts_setup
+        exit 0
+        ;;
+    tools)
+        tools_setup
+        exit 0
+        ;;
+    all)
+        ;;
+    *)
+        exit 1
+        ;;
+esac

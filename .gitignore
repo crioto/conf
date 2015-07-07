@@ -1,2 +1,3 @@
 wget-log*
+*.swp
 /tests/*
