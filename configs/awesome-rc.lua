@@ -44,7 +44,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("~/.config/awesome/awesome-theme/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
@@ -60,8 +60,8 @@ mycommons = {
 }
 
 mydev = {
-    { "idea", "/opt/idea-IU-139.1117.1/bin/idea.sh" },
-    { "clion", "/opt/clion-1.0.1/bin/clion.sh" },
+    { "idea", "/opt/idea/bin/idea.sh" },
+    { "clion", "/opt/clion/bin/clion.sh" },
     { "gtkterm", "gksudo gtkterm" }
 }
 
