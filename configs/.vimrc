@@ -6,7 +6,13 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'jeaye/color_coded'
+Plugin 'jewes/Conque-Shell'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/gdbmgr'
+Plugin 'fatih/vim-go'
+Plugin 'majutsushi/tagbar'
+Plugin 'amiorin/vim-project'
 
 call vundle#end()          
 filetype plugin indent on    

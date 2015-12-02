@@ -52,6 +52,11 @@ if [ $? == 0 ]; then
     unzip -o -qq $VIMDIR/cvim.zip -d $VIMDIR/
     rm -rf $VIMDIR/cvim.zip
 
+    ###### YCM
+
+    echo "Configuring YCM"
+
+
 else
     echo "vim is not installed"
 fi
