@@ -33,17 +33,6 @@ if [ $? == 0 ]; then
     # http://www.vim.org/scripts/script.php?script_id=2555
     wget -nv http://www.vim.org/scripts/download_script.php?src_id=17225 -O $VIMDIR/colors/jellybeans.vim 
 
-    ###### Airline
-
-    echo "Downloading and installing vim-airline"
-    # https://github.com/bling/vim-airline
-    git clone https://github.com/bling/vim-airline.git
-    cp -r vim-airline/autoload ~/.vim/
-    cp -r vim-airline/doc ~/.vim/
-    cp -r vim-airline/plugin ~/.vim/
-    cp -r vim-airline/t ~/.vim/
-    rm -rf vim-airline
-
     ###### cvim 
 
     echo "Downloading cvim plugin for C/C++ support"
