@@ -56,6 +56,12 @@ if [ $? == 0 ]; then
 
     echo "Configuring YCM"
 
+    ###### Configuring Airline
+    git clone https://github.com/powerline/fonts.git powerline-fonts
+    cd powerline-fonts
+    ./install.sh
+    cd ..
+    rm -rf powerline-fonts
 
 else
     echo "vim is not installed"
