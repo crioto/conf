@@ -1,7 +1,7 @@
 conf
 ====
 
-Hi! This is my personal environment configuration tool. I'm using it for easy deployment of my development environment on different machines.
+Hi!!! This is my personal environment configuration tool. I'm using it for easy deployment of my development environment on different machines.
 
 You can use it if you're using:
 
