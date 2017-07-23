@@ -3,11 +3,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Try
+Plugin 'scrooloose/nerdtree'
+Plugin 'jakedouglas/exuberant-ctags'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'neomake/neomake'
+
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
-Plugin 'jeaye/color_coded'
+""Plugin 'jeaye/color_coded'
 Plugin 'jewes/Conque-Shell'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/gdbmgr'
@@ -15,6 +22,7 @@ Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
 Plugin 'amiorin/vim-project'
 Plugin 'klen/python-mode'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()          
 filetype plugin indent on    
@@ -32,6 +40,8 @@ set bs=2
 set sm!
 set number
 colors jellybeans
+" Highlight current line 
+set cursorline
 
 " Airline
 set t_Co=256
@@ -40,6 +50,8 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+let g:airline_theme='light'
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -66,6 +78,11 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" tabar
+nmap <C-m> :TagbarToggle<CR>
 
 " Tab control
 nnoremap <C-S-tab> :tabprevious<CR>
